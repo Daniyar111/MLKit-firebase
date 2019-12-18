@@ -151,15 +151,13 @@ class _MLKitDemoPageState extends State<MLKitDemoPage> {
 
     String result = '';
 
+    final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(this._imageFile);
+
     final options = FaceDetectorOptions(
       enableLandmarks: true,
       enableClassification: true,
       enableTracking: true,
     );
-
-    final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(this._imageFile);
-
-
 
     final FaceDetector faceDetector = FirebaseVision.instance.faceDetector(options);
     final List<Face> faces = await faceDetector.detectInImage(visionImage);
