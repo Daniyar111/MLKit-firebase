@@ -1,0 +1,7 @@
+#Wed Dec 18 20:27:59 ALMT 2019
+base.0=D\:\\FlutterProjects\\mlkit_mobile_daniyar.changylov\\flutter_catalog\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\FlutterProjects\\mlkit_mobile_daniyar.changylov\\flutter_catalog\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out

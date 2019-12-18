@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.google.gms:google-services:4.2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    // Add the "force" resulation strategy to fix problems building the app
+    // (https://github.com/X-Wei/flutter_catalog/issues/4).
+    // C.f. https://stackoverflow.com/a/50578320.
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-v4:27.1.1"
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
